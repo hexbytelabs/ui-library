@@ -3,7 +3,7 @@
   "author": "HexByte Labs <hello@hexbytelabs.com> (https://hexbytelabs.com)",
   "description": "UI components built for HexByte Labs projects.",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "exports": {
     ".": {
