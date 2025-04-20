@@ -10,7 +10,7 @@
       "types": "./dist/lib/main.d.ts",
       "default": "./dist/main.js"
     },
-    "./dist/styles.css": {
+    "./styles.css": {
       "import": "./dist/styles.css",
       "require": "./dist/styles.css"
     }
