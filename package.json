@@ -35,7 +35,7 @@
     "dev": "vite",
     "build": "tsc -b ./tsconfig.lib.json && vite build",
     "prepublish": "rm -rf dist && vite build",
-    "publishPatch": "npm run prepublish && npm version patch && npm publish && gh release create",
+    "publishPatch": "npm run prepublish && npm version patch && npm publish",
     "publishMinor": "npm run prepublish && npm version minor && npm publish",
     "lint": "eslint .",
     "preview": "vite preview"

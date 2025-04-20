@@ -50,7 +50,7 @@ export default defineConfig({
         ]),
       ),
       output:   {
-        assetFileNames: 'assets/[name][extname]',
+        assetFileNames: 'styles[extname]',
         entryFileNames: '[name].js',
       },
     },

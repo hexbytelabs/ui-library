@@ -1,3 +1,3 @@
-import './styles.module.css'
+import './styles.css'
 
 export * from './components/button'
