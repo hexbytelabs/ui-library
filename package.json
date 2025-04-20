@@ -38,8 +38,8 @@
     "dev": "vite",
     "build": "tsc -b ./tsconfig.lib.json && vite build",
     "prepublish": "rm -rf dist && vite build",
-    "publishPatch": "prepublish && npm version patch && npm publish",
-    "publishMinor": "prepublish && npm version minor && npm publish",
+    "publishPatch": "npm prepublish && npm version patch && npm publish",
+    "publishMinor": "npm prepublish && npm version minor && npm publish",
     "lint": "eslint .",
     "preview": "vite preview"
   },
