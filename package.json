@@ -1,22 +1,53 @@
 {
-  "name": "ui-library",
-  "private": true,
+  "name": "@hexbytelabs/ui-library",
+  "author": "HexByte Labs <hello@hexbytelabs.com> (https://hexbytelabs.com)",
+  "description": "UI components built for HexByte Labs projects.",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexbytelabs/ui-library.git"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "bugs": {
+    "url": "https://github.com/hexbytelabs/ui-library/issues"
+  },
+  "homepage": "https://github.com/hexbytelabs/ui-library#readme",
+  "keywords": [
+    "ui",
+    "components",
+    "react",
+    "tailwindcss",
+    "radix-ui",
+    "saas"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc --p ./tsconfig-build.json && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "lodash": "^4.17.21",
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^22.14.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -24,9 +55,14 @@
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "glob": "^11.0.1",
     "globals": "^16.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
-    "vite": "^6.3.1"
+    "vite": "^6.3.1",
+    "vite-plugin-dts": "^4.5.3",
+    "vite-plugin-lib-inject-css": "^2.2.2"
   }
 }
