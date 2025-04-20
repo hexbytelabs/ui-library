@@ -28,7 +28,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime', /lodash\/.*/],
+      external: ['react', 'react/jsx-runtime', /lodash\/.*/, 'tailwindcss'],
       input:    Object.fromEntries(
         glob.sync(
           'lib/**/*.{ts,tsx}',
