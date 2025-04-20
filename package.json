@@ -18,9 +18,6 @@
     "type": "git",
     "url": "git+https://github.com/hexbytelabs/ui-library.git"
   },
-  "sideEffects": [
-    "**/*.css"
-  ],
   "bugs": {
     "url": "https://github.com/hexbytelabs/ui-library/issues"
   },
@@ -38,7 +35,7 @@
     "dev": "vite",
     "build": "tsc -b ./tsconfig.lib.json && vite build",
     "prepublish": "rm -rf dist && vite build",
-    "publishPatch": "npm run prepublish && npm version patch && npm publish && gh create release",
+    "publishPatch": "npm run prepublish && npm version patch && npm publish && gh release create",
     "publishMinor": "npm run prepublish && npm version minor && npm publish",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -48,6 +45,7 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.0",
     "@tailwindcss/vite": "^4.1.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

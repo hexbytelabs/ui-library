@@ -1,6 +1,3 @@
-// @ts-ignore
-import styles from './styles.module.css'
+import './styles.module.css'
 
-export { Button } from './components/Button'
-export { Input } from './components/Input'
-export { Label } from './components/Label'
+export * from './components/button'
