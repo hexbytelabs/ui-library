@@ -3,12 +3,14 @@ import {extname, relative, resolve} from 'path'
 import {fileURLToPath} from 'node:url'
 import {glob} from 'glob'
 import react from '@vitejs/plugin-react'
+import tailwindcss from "@tailwindcss/vite"
 import dts from 'vite-plugin-dts'
 import {libInjectCss} from 'vite-plugin-lib-inject-css'
 
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     libInjectCss(),
     dts({
       include:      ['lib'],
@@ -53,6 +55,11 @@ export default defineConfig({
         assetFileNames: 'assets/[name][extname]',
         entryFileNames: '[name].js',
       },
+    },
+  },
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./lib"),
     },
   },
 })
